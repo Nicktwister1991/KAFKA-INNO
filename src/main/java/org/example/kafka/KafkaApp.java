@@ -9,6 +9,6 @@ public class KafkaApp {
         consumer2.start();
 
         // Продюсер можно запускать отдельно или тут
-        // SimpleProducer.main(args);
+        SimpleProducer.main(args);
     }
 }

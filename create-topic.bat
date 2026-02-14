@@ -15,8 +15,8 @@ echo Ждём 10 секунд, пока оба брокера ZooKeeper стар
 timeout /t 10 /nobreak >nul
 
 echo Создаём топики на ZooKeeper кластере...
-docker exec -i kafka-zk /usr/bin/kafka-topics --create --topic zk-topic-1 --partitions 3 --replication-factor 1 --bootstrap-server kafka-zk:9092
-docker exec -i kafka-zk /usr/bin/kafka-topics --create --topic zk-topic-2 --partitions 3 --replication-factor 1 --bootstrap-server kafka-zk:9092
+docker exec -i kafka-zk /usr/bin/kafka-topics --create --topic zk-topic-1 --partitions 3 --replication-factor 2 --bootstrap-server kafka-zk:9092
+docker exec -i kafka-zk /usr/bin/kafka-topics --create --topic zk-topic-2 --partitions 3 --replication-factor 2 --bootstrap-server kafka-zk:9092
 
 REM --- Проверка топиков ---
 echo.
